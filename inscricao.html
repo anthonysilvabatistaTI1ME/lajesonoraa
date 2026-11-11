@@ -3,143 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laje Sonora | Oficinas</title>
+  <title>Laje Sonora | Inscrição</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="oficinas.css">
+  <link rel="stylesheet" href="inscricao.css">
 </head>
 <body>
   <header class="topo conteudo">
     <a class="logo" href="index.html">Laje Sonora</a>
     <nav class="menu">
       <a href="index.html">Início</a>
-      <a href="oficinas.html" class="atual">Oficinas</a>
-      <a href="inscricao.html">Inscrição</a>
+      <a href="oficinas.html">Oficinas</a>
+      <a href="inscricao.html" class="atual">Inscrição</a>
     </nav>
   </header>
 
   <main class="conteudo">
-    <h1 class="titulo-pagina">Oficinas</h1>
-    <p class="subtitulo-pagina">Cada oficina tem um encontro por semana, de uma hora e meia. Você pode fazer mais de uma, desde que os horários não se cruzem.</p>
-    <div class="filtros">
-      <span class="filtro ativo">Todas</span>
-      <span class="filtro">Iniciante</span>
-      <span class="filtro">Intermediário</span>
-      <span class="filtro">Cordas</span>
-      <span class="filtro">Teclas</span>
-      <span class="filtro">Voz</span>
-      <span class="filtro">Ritmo</span>
-      <span class="filtro">Produção</span>
-    </div>
-    <div class="lista">
-      <article class="oficina">
-        <div class="foto foto-azul"></div>
-        <div class="oficina-texto">
-          <h2>Violão do zero</h2>
-          <p>Você sai da primeira aula tocando três acordes. No fim do semestre, toca uma música inteira com a turma.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Iniciante</span>
-            <span class="etiqueta">Cordas</span>
-          </div>
-        </div>
-        <div class="oficina-detalhes">
-          <strong>Segundas</strong>
-          <span>Das 17h às 18h30</span>
-          <span>4 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
-        </div>
-      </article>
+    <h1 class="titulo-pagina">Inscrição</h1>
+    <div class="inscricao">
+      <section class="explicacao">
+        <h2>O que acontece depois</h2>
+        <p>Assim que você enviar o formulário, a gente confere se ainda tem vaga na oficina escolhida.</p>
+        <p>Em até dois dias você recebe uma mensagem com a data da aula experimental, que é gratuita.</p>
+        <p>Se a turma estiver cheia, seu nome entra na lista de espera e você é avisado quando abrir uma vaga.</p>
+        <p class="aviso">Quem tem menos de 18 anos precisa vir à primeira aula com um responsável.</p>
+      </section>
 
-      <article class="oficina">
-        <div class="foto foto-amarela"></div>
-        <div class="oficina-texto">
-          <h2>Produção de beats</h2>
-          <p>Batidas, linhas de baixo e samples montados no computador. Os computadores da escola já vêm com os programas instalados.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Iniciante</span>
-            <span class="etiqueta">Produção</span>
+      <form class="formulario" action="#" method="post">
+        <div class="linha">
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Como está no seu documento" required>
+          </div>
+          <div class="campo">
+            <label for="nascimento">Data de nascimento</label>
+            <input type="date" id="nascimento" name="nascimento" required>
           </div>
         </div>
-        <div class="oficina-detalhes">
-          <strong>Terças</strong>
-          <span>Das 18h às 19h30</span>
-          <span>2 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
-        </div>
-      </article>
-
-      <article class="oficina">
-        <div class="foto foto-tinta"></div>
-        <div class="oficina-texto">
-          <h2>Canto em grupo</h2>
-          <p>Exercícios de respiração e afinação, e depois arranjos a várias vozes com músicas que a própria turma escolhe.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Todos os níveis</span>
-            <span class="etiqueta">Voz</span>
+        <div class="linha">
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">Celular com DDD</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 91234 5678" required>
           </div>
         </div>
-        <div class="oficina-detalhes">
-          <strong>Quartas</strong>
-          <span>Das 17h às 18h30</span>
-          <span>9 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
+        <div class="campo">
+          <label for="oficina">Oficina</label>
+          <select id="oficina" name="oficina" required>
+            <option value="">Escolha uma oficina</option>
+            <option value="violao">Violão do zero</option>
+            <option value="beats">Produção de beats</option>
+            <option value="canto">Canto em grupo</option>
+            <option value="teclado">Teclado e harmonia</option>
+            <option value="bateria">Bateria e percussão</option>
+            <option value="gravacao">Gravação no celular</option>
+          </select>
         </div>
-      </article>
-
-      <article class="oficina">
-        <div class="foto"></div>
-        <div class="oficina-texto">
-          <h2>Teclado e harmonia</h2>
-          <p>Para quem já toca um pouco e quer entender o que está tocando. Campo harmônico, inversões e acompanhamento.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Intermediário</span>
-            <span class="etiqueta">Teclas</span>
+        <fieldset class="grupo">
+          <legend>Você já toca algum instrumento?</legend>
+          <div class="opcoes">
+            <div class="opcao">
+              <input type="radio" id="tocaSim" name="toca" value="sim">
+              <label for="tocaSim">Sim</label>
+            </div>
+            <div class="opcao">
+              <input type="radio" id="tocaPouco" name="toca" value="pouco">
+              <label for="tocaPouco">Um pouco</label>
+            </div>
+            <div class="opcao">
+              <input type="radio" id="tocaNao" name="toca" value="nao">
+              <label for="tocaNao">Ainda não</label>
+            </div>
           </div>
-        </div>
-        <div class="oficina-detalhes">
-          <strong>Quintas</strong>
-          <span>Das 18h às 19h30</span>
-          <span>5 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
-        </div>
-      </article>
-
-      <article class="oficina">
-        <div class="foto foto-azul"></div>
-        <div class="oficina-texto">
-          <h2>Bateria e percussão</h2>
-          <p>Começa com palmas e pés, passa pelo pandeiro e termina na bateria completa. Ninguém precisa ter instrumento em casa.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Iniciante</span>
-            <span class="etiqueta">Ritmo</span>
+        </fieldset>
+        <fieldset class="grupo">
+          <legend>O que você tem em casa para praticar?</legend>
+          <div class="opcoes">
+            <div class="opcao">
+              <input type="checkbox" id="temViolao" name="tem" value="violao">
+              <label for="temViolao">Violão</label>
+            </div>
+            <div class="opcao">
+              <input type="checkbox" id="temTeclado" name="tem" value="teclado">
+              <label for="temTeclado">Teclado</label>
+            </div>
+            <div class="opcao">
+              <input type="checkbox" id="temComputador" name="tem" value="computador">
+              <label for="temComputador">Computador</label>
+            </div>
+            <div class="opcao">
+              <input type="checkbox" id="temFone" name="tem" value="fone">
+              <label for="temFone">Fone de ouvido</label>
+            </div>
+            <div class="opcao">
+              <input type="checkbox" id="temNada" name="tem" value="nada">
+              <label for="temNada">Nada por enquanto</label>
+            </div>
           </div>
+        </fieldset>
+        <div class="campo">
+          <label for="motivo">Por que você quer fazer essa oficina?</label>
+          <textarea id="motivo" name="motivo" placeholder="Conte em poucas linhas"></textarea>
         </div>
-        <div class="oficina-detalhes">
-          <strong>Sextas</strong>
-          <span>Das 17h às 18h30</span>
-          <span>6 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
+        <div class="opcao">
+          <input type="checkbox" id="responsavel" name="responsavel" required>
+          <label for="responsavel">Meu responsável sabe desta inscrição</label>
         </div>
-      </article>
-
-      <article class="oficina">
-        <div class="foto foto-amarela"></div>
-        <div class="oficina-texto">
-          <h2>Gravação no celular</h2>
-          <p>Como posicionar o celular, gravar voz e instrumento separados e juntar tudo num aplicativo gratuito de edição.</p>
-          <div class="etiquetas">
-            <span class="etiqueta">Todos os níveis</span>
-            <span class="etiqueta">Produção</span>
-          </div>
+        <div>
+          <button class="botao" type="submit">Enviar inscrição</button>
         </div>
-        <div class="oficina-detalhes">
-          <strong>Sábados</strong>
-          <span>Das 10h às 11h30</span>
-          <span>7 vagas restantes</span>
-          <a href="inscricao.html">Quero me inscrever</a>
-        </div>
-      </article>
+      </form>
     </div>
   </main>
 
